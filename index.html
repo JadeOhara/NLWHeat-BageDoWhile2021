@@ -27,8 +27,8 @@
           <img src="./images/jade.jpg" alt="Foto Pessoal" />
         </div>
 
-        <h1>Jade Ohara</h1>
-        <a href="http://github.com/JadeOhara" target="_blank">
+        <h1 id="userName">Nome Aqui</h1>
+        <a id="github" href="https://github.com/" target="_blank">
           <img src="./images/github.svg" alt="ícone github" />
           JadeOhara</a
         >
@@ -38,29 +38,63 @@
           world wide web.
         </p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com" target="_blank"
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/" target="_blank"
               ><img src="./images/youtube.svg" alt="ícone youtube"
             /></a>
           </li>
-          <li>
-            <a href="https://instagram.com" target="_blank"
+          <li class="instagram">
+            <a href="https://instagram.com/" target="_blank"
               ><img src="./images/instagram.svg" alt="ícone instagram"
             /></a>
           </li>
-          <li>
-            <a href="https://facebook.com" target="_blank"
+          <li class="facebook">
+            <a href="https://facebook.com/" target="_blank"
               ><img src="./images/facebook.svg" alt="ícone facebook"
             /></a>
           </li>
-          <li>
-            <a href="https://twitter.com" target="_blank"
+          <li class="twitter">
+            <a href="https://twitter.com/" target="_blank"
               ><img src="./images/twitter.svg" alt="ícone twitter"
             /></a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'jadeohara',
+        youtube: 'channel/UCZyuqeE6bhcAYpkwXS22nFA',
+        facebook: 'jadeoharam92',
+        instagram: 'jadeohara',
+        twitter: 'jade_ohara'
+      }
+
+      // const linkSocialMedia = {
+      //   githubLink: 'github.com/',
+      //   youtubeLink: 'www.youtube.com/c/',
+      //   facebookLink: 'www.facebook.com/',
+      //   instagramLink: 'www.instagram.com/',
+      //   twitterLink: 'twitter.com/'
+      // }
+
+      function changeSocialMediaLinks() {
+        //DOM
+        //document.getElementById('userName').textContent = 'Jade Ohara'
+        userName.textContent = 'Jade Ohara'
+
+        github.href = `https://github.com/${LinksSocialMedia.github}`
+
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
