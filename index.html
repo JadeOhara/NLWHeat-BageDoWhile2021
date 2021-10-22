@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Jade Ohara - DoWhile 2021</title>
+    <title>DoWhile 2021</title>
 
     <link rel="stylesheet" href="./style.css" />
 
@@ -24,18 +24,17 @@
             <!-- alt = acessibilidade, busca do google -->
             <img src="./images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="./images/jade.jpg" alt="Foto Pessoal" />
+          <img src="./images/jade.jpg" alt="Foto Pessoal" id="userImage"/>
         </div>
 
-        <h1 id="userName">Nome Aqui</h1>
+        <h1 id="userName">Your name here</h1>
         <a id="github" href="https://github.com/" target="_blank">
           <img src="./images/github.svg" alt="ícone github" />
-          JadeOhara</a
+          <span id="userLogin">GitHub User</span></a
         >
 
-        <p>
-          Bringing people out of the digital darkness into the light of the
-          world wide web.
+        <p id="userBio">
+          Your bio here.
         </p>
 
         <ul id="socialLinks">
@@ -63,38 +62,7 @@
       </div>
     </main>
 
-    <script>
-      const LinksSocialMedia = {
-        github: 'jadeohara',
-        youtube: 'channel/UCZyuqeE6bhcAYpkwXS22nFA',
-        facebook: 'jadeoharam92',
-        instagram: 'jadeohara',
-        twitter: 'jade_ohara'
-      }
-
-      // const linkSocialMedia = {
-      //   githubLink: 'github.com/',
-      //   youtubeLink: 'www.youtube.com/c/',
-      //   facebookLink: 'www.facebook.com/',
-      //   instagramLink: 'www.instagram.com/',
-      //   twitterLink: 'twitter.com/'
-      // }
-
-      function changeSocialMediaLinks() {
-        //DOM
-        //document.getElementById('userName').textContent = 'Jade Ohara'
-        userName.textContent = 'Jade Ohara'
-
-        github.href = `https://github.com/${LinksSocialMedia.github}`
-
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <!--Vamos  colocar o script aqui  ao  invés do head  pro site carregar antes de acessar a DOM-->
+    <script src="main.js"></script>
   </body>
 </html>
