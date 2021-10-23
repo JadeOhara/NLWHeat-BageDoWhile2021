@@ -17,9 +17,17 @@ body {
 }
 
 main {
+  /*ANTES DA RESPONSIVIDADE
   background: url(images/background.svg);
   width: 375px;
   height: 812px;
+  DEPOIS DA RESPONSIVIDADE
+  no-repeat == não repete
+  center/cover = centraliza o backgroud e  cobre  toda a  área do dispositivo*/
+  background: url(images/background.png) no-repeat center/cover;
+  width: 100vw; /*pega a largura total  de tela  e preencha inteira*/
+  min-height: 812px; /*altura mínima*/
+  height: 100vh; /*mas pra dispositivos maiores, toda a viewport*/
 }
 
 .container {
@@ -77,4 +85,13 @@ ul {
   /*flex-direction: column;*/
   gap: 0.5rem;
   justify-content: center;
+}
+
+/*estudar breakpoints e at rule */
+@media (min-width: 720px) {
+  /* estilos versão tablet */
+}
+
+@media (max-width: 960px) {
+  /* estilos versão desktop */
 }
