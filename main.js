@@ -1,9 +1,9 @@
 const LinksSocialMedia = {
   github: 'jadeohara',
-  youtube: 'channel/UCZyuqeE6bhcAYpkwXS22nFA',
-  facebook: 'jadeoharam92',
-  instagram: 'jadeohara',
-  twitter: 'jade_ohara'
+  youtube: 'channel/yourUserHere',
+  facebook: 'yourUserHere',
+  instagram: 'yourUserHere',
+  twitter: 'yourUserHere'
 }
 
 function changeSocialMediaLinks() {
@@ -38,17 +38,17 @@ changeSocialMediaLinks()
 getGitHubProfileInfos()
 
 
-//PROMISE
+//    PROMISE
 //promise verifica se deu  certo de pegar a resposta e então .then ele faz algo
 //Você pode ter mais de uma resposta
 //Cada .then pega a resposta do .then anterior
 
 
-// FUNCTION
+//    FUNCTION
 // function  nomeDaFuncao(argumento1,argumento2)
 
 
-// ARROW FUNCTION  = FUNÇÃO  ANÔNIMA  (NÃO TEM NOME)
+//    ARROW FUNCTION  = FUNÇÃO  ANÔNIMA  (NÃO TEM NOME)
 //forma contraída da função
 
 // argumento => {} //1 argumento
